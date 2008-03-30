@@ -8,6 +8,7 @@ Source0:	http://cvs.pld-linux.org/cgi-bin/cvsweb/pld-builder.new/client/%{name}.
 # Source0-md5:	c9f98f1ef3a5aaa1172d7d82f8d716e1
 URL:		http://cvs.pld-linux.org/cgi-bin/cvsweb/pld-builder.new/client/make-request.sh
 Requires:	/usr/sbin/sendmail
+Requires:	gnupg
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
