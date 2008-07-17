@@ -11,6 +11,7 @@ Source0:	http://kamil.klecza.pl/pld/%{name}-%{version}.sh
 URL:		http://cvs.pld-linux.org/cgi-bin/cvsweb/pld-builder.new/client/make-request.sh
 Requires:	/usr/sbin/sendmail
 Requires:	gnupg
+ObsoleteS:	pld-builder-client
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
