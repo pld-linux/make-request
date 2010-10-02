@@ -1,11 +1,11 @@
 Summary:	Tool for sending build requests
 Name:		make-request
-Version:	1.77
+Version:	1.81
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://cvs.pld-linux.org/cgi-bin/cvsweb/pld-builder.new/client/%{name}.sh?rev=%{version}#/%{name}.sh
-# Source0-md5:	b9bedb16673bd3ca9882dd932fb294ec
+# Source0-md5:	bb8d7ffa03b1c75d15ec400d54caa0ff
 #Source0:	%{name}-%{version}.sh
 URL:		http://cvs.pld-linux.org/cgi-bin/cvsweb/pld-builder.new/client/make-request.sh
 Requires:	/usr/sbin/sendmail
