@@ -1,13 +1,12 @@
 Summary:	Tool for sending build requests
 Name:		make-request
-Version:	1.84
+Version:	1.85
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://cvs.pld-linux.org/cgi-bin/cvsweb/pld-builder.new/client/%{name}.sh?rev=%{version}#/%{name}.sh
-# Source0-md5:	e25d4da3ddc053be8783dd8494181ebd
-#Source0:	%{name}-%{version}.sh
-URL:		http://cvs.pld-linux.org/cgi-bin/cvsweb/pld-builder.new/client/make-request.sh
+Source0:	http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=blob_plain;f=client/make-request.sh;h=195fa352089e444d951c43aa361537e3538b2c26;hb=aeaf1b73b36ef2bb4d14a682279aeeb512719088;/%{name}-%{version}.sh
+# Source0-md5:	8ba22399e2c7a31930f84118fd3cdb44
+URL:		http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=summary
 Requires:	/usr/sbin/sendmail
 Requires:	gnupg
 Obsoletes:	pld-builder-client
@@ -31,9 +30,8 @@ Two modes of operation are:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/%{name}
+install -p %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
