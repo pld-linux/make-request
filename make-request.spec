@@ -1,11 +1,11 @@
 Summary:	Tool for sending build requests
 Name:		make-request
-Version:	1.85
+Version:	1.86
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=blob_plain;f=client/make-request.sh;h=195fa352089e444d951c43aa361537e3538b2c26;hb=aeaf1b73b36ef2bb4d14a682279aeeb512719088;/%{name}-%{version}.sh
-# Source0-md5:	8ba22399e2c7a31930f84118fd3cdb44
+Source0:	http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=blob_plain;f=client/make-request.sh;hb=a2cad6fc6983f32892675feda58dc16724530abb;/%{name}-%{version}.sh
+# Source0-md5:	126f7da1d740136c21f7fb83be4536db
 URL:		http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=summary
 Requires:	/usr/sbin/sendmail
 Requires:	gnupg
