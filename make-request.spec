@@ -1,4 +1,5 @@
-Summary:	Tool for sending build requests
+Summary:	Tool for sending PLD-specific build requests
+Summary(pl.UTF-8):	Narzędzie do wysyłania żądań budowania specyficznych dla PLD
 Name:		make-request
 Version:	1.86
 Release:	1
@@ -15,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A tool which, based on the way it's configured and on the cmdline
-parameters given to it, generates an xml-formated build request, which
+parameters given to it, generates an XML-formated build request, which
 it then signs with the requester's PGP key (using the gpg utility) and
 then sends it to the source builder via a sendmail compatible command
 line application (by default invoking "sendmail -t").
@@ -25,6 +26,23 @@ Two modes of operation are:
   builders
 - sending a chosen command to be executed on a specified group of
   builders
+
+It works with PLD (or compatible) package builders.
+
+%description -l pl.UTF-8
+Narzędzie, które w zależności od konfiguracji i parametrów linii
+poleceń, generuje żądanie budowania w formacie XML, podpisuje je
+kluczem PGP zlecającego (przy użyciu narzędzia gpg), a następnie
+wysyła na builder źródłowy przy użyciu polecenia sendmail (domyślnie
+"sendmail -t").
+
+Dostępne są dwa tryby operacji:
+- wysyłanie żądań zbudowania określonych pakietów na określonej grupie
+  builderów
+- wysłanie podanego polecenia do wykonania na określonej grupie
+  builderów
+
+Narzędzie działa z builderami pakietów PLD (lub kompatybilnymi).
 
 %prep
 
