@@ -1,14 +1,15 @@
+%define		githash	044d04b
 Summary:	Tool for sending PLD-specific build requests
 Summary(pl.UTF-8):	Narzędzie do wysyłania żądań budowania specyficznych dla PLD
 Name:		make-request
-Version:	1.86
+Version:	1.87
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=blob_plain;f=client/make-request.sh;hb=a2cad6fc6983f32892675feda58dc16724530abb;/%{name}-%{version}.sh
-# Source0-md5:	126f7da1d740136c21f7fb83be4536db
+Source0:	http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=blob_plain;f=client/make-request.sh;hb=%{githash};/%{name}-%{version}.sh
+# Source0-md5:	c191c8b460f0cb47edf1ca51d926b833
 URL:		http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=summary
-Requires:	/usr/sbin/sendmail
+Requires:	/usr/lib/sendmail
 Requires:	gnupg
 Obsoletes:	pld-builder-client
 BuildArch:	noarch
@@ -45,6 +46,10 @@ Dostępne są dwa tryby operacji:
 Narzędzie działa z builderami pakietów PLD (lub kompatybilnymi).
 
 %prep
+
+%build
+ver=$(awk -F= '/^VERSION=/{print $2}' %{SOURCE0})
+test "$ver" = %{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
