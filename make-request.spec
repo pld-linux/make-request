@@ -11,7 +11,8 @@ Source0:	http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=blob_plain;f
 URL:		http://git.pld-linux.org/?p=projects/pld-builder.new.git;a=summary
 Requires:	gnupg
 Suggests:	/usr/lib/sendmail
-Suggests:	python
+Suggests:	python3
+Suggests:	python3-modules
 Obsoletes:	pld-builder-client
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
